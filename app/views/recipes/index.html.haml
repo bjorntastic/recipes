@@ -1,0 +1,11 @@
+%h1 All Recipes
+	- @recipes.each_slice(3) do |r|
+			.panel.panel-info
+				.panel-heading
+					.panel-title
+						= r.title
+				.panel-body
+					= r.description
+				.panel-footer
+					= link_to "Edit", edit_recipe_path(r), class: 'btn btn-default'
+					= link_to "Delete", recipe_path, method: :delete, class: 'btn btn-danger'
