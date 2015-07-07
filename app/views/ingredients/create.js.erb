@@ -1,0 +1,10 @@
+// $('#ingredients').remove
+$('#ingredients').prepend("<p> - <%= escape_javascript(@ingredient.name) %> <%= escape_javascript(link_to 'Remove', url_for(controller: 'ingredients', action: 'destroy', id: @ingredient.id), method: :delete, class: 'pull-right') %> </p>");
+
+$("#reset-form").find('#name').val("");
+
+
+
+//	"<%= escape_javascript(text_field_tag :name, nil, class: 'col-md-6') %>",
+//	"<%= escape_javascript(link_to 'Add ingredient', new_ingredient_path, class: 'btn btn-primary', remote: true) %>")
+// <%= text_field_tag :name, class: 'form-control' %>
