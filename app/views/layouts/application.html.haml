@@ -12,7 +12,7 @@
 			.navbar-header
 				=link_to root_path do
 					.navbar.navbar-brand
-						%h1 LOGO
+						= image_tag "recipe_icon"
 			%ul.nav.navbar-nav.navbar-right
 				%li= link_to "Add Recipe", new_recipe_path
 				%li= link_to "Log Out", root_path

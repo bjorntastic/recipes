@@ -1,14 +1,15 @@
-%h1 All Recipes
-- @recipes.each_slice(3) do |row|
-	.row
-	- row.each do |r|
-		.col-sm-4
-			.panel.panel-info
-				.panel-heading
-					.panel_title= link_to r.title, recipe_path(r)
-				= link_to recipe_path(r) do
-					.panel-body	
-						= r.description
-				.panel-footer
-					= link_to "Edit", edit_recipe_path(r), class: 'btn btn-default'
-					= link_to "Delete", recipe_path(r), method: :delete, class: 'btn btn-default'
+#index-pics
+	%h1 All Recipes
+	- @recipes.each_slice(3) do |row|
+		.row
+		- row.each do |r|
+			.col-sm-4
+				.panel.panel-default
+					.panel-heading
+						.panel_title= link_to r.title, recipe_path(r)
+					= link_to recipe_path(r) do
+						.panel-body	
+							= image_tag "bruschetta"
+					.panel-footer
+						= link_to "Edit", edit_recipe_path(r), class: 'btn btn-default'
+						= link_to "Delete", recipe_path(r), method: :delete, class: 'btn btn-default'

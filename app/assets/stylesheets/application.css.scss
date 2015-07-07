@@ -16,3 +16,24 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html, body {
+	background: #E6EFF7;
+}
+
+.navbar img { height: 50px;}
+
+#pic, #index-pics {
+	.panel-body { padding: 0px; }
+	img { width: 100%; }
+}
+
+a {
+	color: #BE90D4;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #9B59B6;
+}

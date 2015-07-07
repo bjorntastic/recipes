@@ -1,26 +1,27 @@
 .row
-	.col-md-4
-		.panel.panel-info
+	.col-md-4#pic
+		.panel.panel-default
 			.panel-heading
-				.panel-title
-					%h2= @recipe.title
+				.panel-title= @recipe.title
+			.panel-body= image_tag "bruschetta"
 
 	.col-md-7.col-md-offset-1
-		.panel.panel-warning
-			.panel-heading SDSAD
+		.panel.panel-default
+			.panel-heading
+				.panel-title Description
 			.panel-body
-				%p SKDASDKAKSD
+				%p= @recipe.description
 %br/
 %br/
 .row
 	.col-md-6
 		.panel.panel-default
-			.panel-heading SDSAD
+			.panel-heading Ingredients
 			.panel-body
 				%p SKDASDKAKSD
 
 	.col-md-6
 		.panel.panel-default
-			.panel-heading SDSAD
+			.panel-heading Instructions
 			.panel-body
 				%p SKDASDKAKSD
